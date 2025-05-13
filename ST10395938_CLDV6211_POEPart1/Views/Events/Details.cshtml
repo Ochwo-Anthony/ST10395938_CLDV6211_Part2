@@ -1,0 +1,41 @@
+﻿@model ST10395938_CLDV6211_POEPart1.Models.Events
+
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-light">
+            <h4 class="mb-0">Event Details</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Event Name</dt>
+                <dd class="col-sm-9">@Model.EventName</dd>
+
+                <dt class="col-sm-3">Date</dt>
+                <dd class="col-sm-9">@Model.EventDate.ToString("yyyy-MM-dd")</dd>
+
+                <dt class="col-sm-3">Time</dt>
+                <dd class="col-sm-9">@Model.EventDate.ToString("HH:mm")</dd>
+
+                <dt class="col-sm-3">Description</dt>
+                <dd class="col-sm-9">@Model.EventDescription</dd>
+
+                <dt class="col-sm-3">Venue</dt>
+                <dd class="col-sm-9">@Model.Venues?.VenueName</dd>
+
+                @if (!string.IsNullOrEmpty(Model.Venues?.ImageUrl))
+                {
+                    <dt class="col-sm-3">Venue Image</dt>
+                    <dd class="col-sm-9">
+                        <img src="@Model.Venues.ImageUrl" class="img-thumbnail" style="max-width: 150px;" />
+                    </dd>
+                }
+            </dl>
+
+            <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+        </div>
+    </div>
+</div>

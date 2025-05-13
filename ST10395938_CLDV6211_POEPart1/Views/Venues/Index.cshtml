@@ -1,0 +1,111 @@
+﻿@model IEnumerable<ST10395938_CLDV6211_POEPart1.Models.Venues>
+
+@{
+    ViewData["Title"] = "List of Venues";
+}
+
+<!-- Inline CSS for this page -->
+<style>
+    .venue-card {
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+    }
+
+        .venue-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+    .venue-name {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #0077cc;
+        text-align: center;
+    }
+
+    .venue-details {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.4s ease, max-height 0.4s ease;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .venue-card:hover .venue-details {
+        opacity: 1;
+        max-height: 500px;
+    }
+
+    .venue-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .action-buttons a {
+        margin: 0 5px;
+    }
+</style>
+
+<h1 class="mb-4">LIST OF VENUES</h1>
+
+<!-- ✅ Display Messages -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary mb-4">+ Create New Venue</a>
+</p>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="venue-card">
+                <div class="venue-name">@item.VenueName</div>
+
+                <div class="venue-details">
+                    <p><strong>Location:</strong> @item.VenueLocation</p>
+                    <p><strong>Capacity:</strong> @item.VenueCapacity</p>
+
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@item.ImageUrl" alt="Venue Image" class="venue-image" />
+                    }
+                    else
+                    {
+                        <p><em>No image available</em></p>
+                    }
+
+                    <div class="action-buttons">
+                        <a asp-action="Edit" asp-route-venueid="@item.VenueId" class="btn btn-sm btn-outline-primary">Edit</a>
+                        <a asp-action="Details" asp-route-venueid="@item.VenueId" class="btn btn-sm btn-outline-secondary">Details</a>
+                        <a asp-action="Delete" asp-route-venueid="@item.VenueId" class="btn btn-sm btn-outline-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

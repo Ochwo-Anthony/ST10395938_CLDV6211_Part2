@@ -1,0 +1,107 @@
+﻿@model ST10395938_CLDV6211_POEPart1.Models.Events
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Inline CSS for light theme styling (same as Venues) -->
+<style>
+    .form-container {
+        background-color: #fff;
+        padding: 2rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        max-width: 600px;
+        margin: auto;
+    }
+
+        .form-container h4 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+    .form-control {
+        border-radius: 0.5rem;
+        padding: 0.6rem 0.9rem;
+        border: 1px solid #ccc;
+    }
+
+    label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #555;
+    }
+
+    .btn-primary {
+        background-color: #0077cc;
+        border-color: #006bb3;
+        padding: 0.5rem 1.2rem;
+        border-radius: 0.5rem;
+    }
+
+    a.back-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<h1 class="text-center mb-4">Create New Event</h1>
+
+<div class="form-container">
+    <h4>Event Details</h4>
+    <hr />
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <div class="form-group mb-3">
+            <label asp-for="EventName" class="control-label"></label>
+            <input asp-for="EventName" class="form-control" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="EventDate" class="control-label"></label>
+            <input asp-for="EventDate" class="form-control" />
+            <span asp-validation-for="EventDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="EventDescription" class="control-label"></label>
+            <input asp-for="EventDescription" class="form-control" />
+            <span asp-validation-for="EventDescription" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-4">
+            <label asp-for="VenueId" class="control-label"></label>
+            <select asp-for="VenueId" class="form-control">
+                <option value="">-- Select Venue --</option>
+                @foreach (var venue in ViewBag.Venues)
+                {
+                    <option value="@venue.VenueId">@venue.VenueName</option>
+                }
+            </select>
+            <span asp-validation-for="VenueId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group text-center">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <div class="text-center">
+        <a asp-action="Index" class="back-link">← Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

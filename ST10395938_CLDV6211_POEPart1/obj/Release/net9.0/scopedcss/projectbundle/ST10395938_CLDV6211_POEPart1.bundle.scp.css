@@ -1,0 +1,124 @@
+/* _content/ST10395938_CLDV6211_POEPart1/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* === Clean & Modern Light Theme for EventEase === */
+
+/* Base body styling */
+body[b-2ys2uhpsr7] {
+    background-color: #d2d4d6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar branding */
+a.navbar-brand[b-2ys2uhpsr7] {
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0077cc;
+}
+
+/* General link styling */
+a[b-2ys2uhpsr7] {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+    a:hover[b-2ys2uhpsr7] {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+/* Bootstrap primary button override */
+.btn-primary[b-2ys2uhpsr7] {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: 500;
+    border-radius: 0.375rem;
+}
+
+    .btn-primary:hover[b-2ys2uhpsr7] {
+        background-color: #0069d9;
+        border-color: #0062cc;
+    }
+
+/* Success and warning buttons for theme consistency */
+.btn-success[b-2ys2uhpsr7] {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.btn-warning[b-2ys2uhpsr7] {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.btn:hover[b-2ys2uhpsr7] {
+    opacity: 0.95;
+}
+
+/* Active nav pill */
+.nav-pills .nav-link.active[b-2ys2uhpsr7],
+.nav-pills .show > .nav-link[b-2ys2uhpsr7] {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Utility borders */
+.border-top[b-2ys2uhpsr7] {
+    border-top: 1px solid #dee2e6;
+}
+
+.border-bottom[b-2ys2uhpsr7] {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Subtle box-shadow */
+.box-shadow[b-2ys2uhpsr7] {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* Accept policy button styling */
+button.accept-policy[b-2ys2uhpsr7] {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Footer styling */
+.footer[b-2ys2uhpsr7] {
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/* Headings and titles */
+h1[b-2ys2uhpsr7], h2[b-2ys2uhpsr7], h3[b-2ys2uhpsr7], h4[b-2ys2uhpsr7], h5[b-2ys2uhpsr7] {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Table styling */
+.table[b-2ys2uhpsr7] {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+}
+
+/* Alerts */
+.alert[b-2ys2uhpsr7] {
+    border-radius: 0.375rem;
+}

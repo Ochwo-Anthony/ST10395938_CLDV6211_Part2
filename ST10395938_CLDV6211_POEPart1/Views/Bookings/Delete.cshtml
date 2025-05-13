@@ -1,0 +1,36 @@
+﻿@model ST10395938_CLDV6211_POEPart1.Models.Bookings
+
+@{
+    ViewData["Title"] = "Delete Booking";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-danger text-white">
+            <h4 class="mb-0">Delete Booking</h4>
+        </div>
+        <div class="card-body">
+            <h5>Are you sure you want to delete this booking?</h5>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">Event Name</dt>
+                <dd class="col-sm-9">@Model.Events.EventName</dd>
+
+                <dt class="col-sm-3">Venue Name</dt>
+                <dd class="col-sm-9">@Model.Venues.VenueName</dd>
+
+                <dt class="col-sm-3">Booking Date</dt>
+                <dd class="col-sm-9">@Model.BookingDate.ToString("yyyy-MM-dd")</dd>
+
+                <dt class="col-sm-3">Booking Time</dt>
+                <dd class="col-sm-9">@Model.BookingDate.ToString("HH:mm")</dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="BookingId" />
+                <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

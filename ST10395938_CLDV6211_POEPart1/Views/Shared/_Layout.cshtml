@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EventEase</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ST10395938_CLDV6211_POEPart1.styles.css" asp-append-version="true" />
+    <style>
+        /* Navbar Custom Styles */
+        .navbar-custom {
+            background-color: #0077cc; /* Light Blue */
+        }
+
+            .navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link {
+                color: #fff;
+            }
+
+                .navbar-custom .navbar-nav .nav-link:hover {
+                    color: #f8f9fa;
+                }
+
+        /* Header Section */
+        .header-bg {
+            background-color: #ffffff; /* White background for the header */
+            padding: 1rem 0; /* Padding to give it a little height */
+            text-align: center; /* Center the company name */
+        }
+
+        .company-name {
+            font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+            font-size: 2.5rem; /* Larger font size for the company name */
+            font-weight: 700; /* Bold text */
+            color: #0077cc; /* Light blue color */
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 1rem;
+        }
+
+            .footer a {
+                color: #0077cc;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light navbar-custom mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EventEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Venues" asp-action="Index">Venues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Bookings" asp-action="Index">Bookings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 EventEase - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿@model ST10395938_CLDV6211_POEPart1.Models.Bookings
+
+@{
+    ViewData["Title"] = "Booking Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-light">
+            <h4 class="mb-0">Booking Details</h4>
+        </div>
+        <div class="card-body">
+            <!-- Event Information -->
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Event Name</strong></div>
+                <div class="col-sm-9">@Model.Events.EventName</div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Event Date</strong></div>
+                <div class="col-sm-9">@Model.Events.EventDate.ToString("yyyy-MM-dd")</div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Event Time</strong></div>
+                <div class="col-sm-9">@Model.Events.EventDate.ToString("HH:mm")</div>
+            </div>
+
+            <!-- Venue Information -->
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Venue Name</strong></div>
+                <div class="col-sm-9">@Model.Venues.VenueName</div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Venue Location</strong></div>
+                <div class="col-sm-9">@Model.Venues.VenueLocation</div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Venue Capacity</strong></div>
+                <div class="col-sm-9">@Model.Venues.VenueCapacity</div>
+            </div>
+
+            <!-- Venue Image -->
+            @if (!string.IsNullOrEmpty(Model.Venues?.ImageUrl))
+            {
+                <div class="row mb-4">
+                    <div class="col-sm-3"><strong>Venue Image</strong></div>
+                    <div class="col-sm-9">
+                        <img src="@Model.Venues.ImageUrl" class="img-fluid rounded" style="max-width: 200px;" />
+                    </div>
+                </div>
+            }
+
+            <!-- Booking Information -->
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Booking Date</strong></div>
+                <div class="col-sm-9">@Model.BookingDate.ToString("yyyy-MM-dd")</div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-sm-3"><strong>Booking Time</strong></div>
+                <div class="col-sm-9">@Model.BookingDate.ToString("HH:mm")</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

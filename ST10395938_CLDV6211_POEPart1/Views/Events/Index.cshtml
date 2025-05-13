@@ -1,0 +1,132 @@
+﻿@model IEnumerable<ST10395938_CLDV6211_POEPart1.Models.Events>
+
+@{
+    ViewData["Title"] = "List of Events";
+}
+
+<style>
+    .styled-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+
+        .styled-table th {
+            background-color: #f1f5f9;
+            color: #333;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .styled-table td {
+            background-color: #ffffff;
+            padding: 16px;
+            vertical-align: top;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .styled-table tr:hover td {
+            background-color: #e9f5ff;
+            transform: scale(1.01);
+        }
+
+    .venue-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .venue-details {
+        font-size: 0.85rem;
+        color: #555;
+        margin-top: 6px;
+        display: none;
+    }
+
+    tr:hover .venue-details {
+        display: block;
+    }
+
+    .action-buttons a {
+        margin-right: 10px;
+        text-decoration: none;
+    }
+
+    .btn-sm {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+</style>
+
+<h2 class="mb-4">🎉 Events Overview</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">+ Create New Event</a>
+</p>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Venue</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <strong>@item.EventName</strong>
+                </td>
+                <td>
+                    <div><strong>@item.EventDate.ToString("dddd, dd MMM yyyy")</strong></div>
+                    <div style="font-size: 0.85rem; color: #555;">🕒 @item.EventDate.ToString("hh:mm tt")</div>
+                </td>
+                <td>
+                    @item.EventDescription
+                </td>
+                <td>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <img class="venue-image" src="@item.Venues.ImageUrl" alt="Venue Image"
+                             onerror="this.src='https://via.placeholder.com/80'" />
+                        <div>
+                            <div><strong>@item.Venues.VenueName</strong></div>
+                            <div class="venue-details">
+                                📍 @item.Venues.VenueLocation <br />
+                                👥 @item.Venues.VenueCapacity people
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="action-buttons">
+                    <a asp-action="Edit" asp-route-eventId="@item.EventId" class="btn btn-outline-warning btn-sm">Edit</a>
+                    <a asp-action="Details" asp-route-eventId="@item.EventId" class="btn btn-outline-info btn-sm">Details</a>
+                    <a asp-action="Delete" asp-route-eventId="@item.EventId" class="btn btn-outline-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

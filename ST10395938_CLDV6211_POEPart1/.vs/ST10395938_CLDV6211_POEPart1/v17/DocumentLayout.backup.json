@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|c:\\users\\lab_services_student\\desktop\\github\\st10395938_cldv6211_part2\\st10395938_cldv6211_poepart1\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|solutionrelative:views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|c:\\users\\lab_services_student\\desktop\\github\\st10395938_cldv6211_part2\\st10395938_cldv6211_poepart1\\controllers\\venuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|solutionrelative:controllers\\venuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|c:\\users\\lab_services_student\\desktop\\github\\st10395938_cldv6211_part2\\st10395938_cldv6211_poepart1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|c:\\users\\lab_services_student\\desktop\\github\\st10395938_cldv6211_part2\\st10395938_cldv6211_poepart1\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|solutionrelative:views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|c:\\users\\lab_services_student\\desktop\\github\\st10395938_cldv6211_part2\\st10395938_cldv6211_poepart1\\views\\events\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|solutionrelative:views\\events\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|c:\\users\\lab_services_student\\desktop\\github\\st10395938_cldv6211_part2\\st10395938_cldv6211_poepart1\\views\\bookings\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|solutionrelative:views\\bookings\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|c:\\users\\lab_services_student\\desktop\\github\\st10395938_cldv6211_part2\\st10395938_cldv6211_poepart1\\views\\events\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36D0F189-75F1-4C50-98DA-D2085E0FE686}|ST10395938_CLDV6211_POEPart1.csproj|solutionrelative:views\\events\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VenuesController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Controllers\\VenuesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VenuesController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Controllers\\VenuesController.cs",
+              "RelativeToolTip": "Controllers\\VenuesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T18:47:15.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwDYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T17:52:46.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Events\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\Create.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Events\\Create.cshtml",
+              "RelativeToolTip": "Views\\Events\\Create.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAqwFAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T17:44:20.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Events\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Events\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Events\\Delete.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T17:42:27.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Bookings\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bookings\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Bookings\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Bookings\\Delete.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T17:30:02.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Bookings\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bookings\\Create.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Bookings\\Create.cshtml",
+              "RelativeToolTip": "Views\\Bookings\\Create.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwB0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T17:29:54.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Bookings\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bookings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\Github\\ST10395938_CLDV6211_Part2\\ST10395938_CLDV6211_POEPart1\\Views\\Bookings\\Index.cshtml",
+              "RelativeToolTip": "Views\\Bookings\\Index.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAqwDYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T17:23:55.01Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+﻿@model ST10395938_CLDV6211_POEPart1.Models.Venues
+@{
+    ViewData["Title"] = "Venue Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-light">
+            <h4 class="mb-0">Venue Details</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Name</dt>
+                <dd class="col-sm-9">@Model.VenueName</dd>
+                <dt class="col-sm-3">Location</dt>
+                <dd class="col-sm-9">@Model.VenueLocation</dd>
+                <dt class="col-sm-3">Capacity</dt>
+                <dd class="col-sm-9">@Model.VenueCapacity</dd>
+                <dt class="col-sm-3">Image</dt>
+                <dd class="col-sm-9">
+                    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                    {
+                        <img src="@Model.ImageUrl" class="img-thumbnail" style="max-width: 150px;" />
+                    }
+                    else
+                    {
+                        <span>No Image</span>
+                    }
+                </dd>
+            </dl>
+            <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+        </div>
+    </div>
+</div>

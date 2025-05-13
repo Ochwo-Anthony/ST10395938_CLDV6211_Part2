@@ -1,0 +1,39 @@
+﻿@model ST10395938_CLDV6211_POEPart1.Models.Events
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-danger text-white">
+            <h4 class="mb-0">Delete Event</h4>
+        </div>
+        <div class="card-body">
+            <h5>Are you sure you want to delete this event?</h5>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">Event Name</dt>
+                <dd class="col-sm-9">@Model.EventName</dd>
+
+                <dt class="col-sm-3">Date</dt>
+                <dd class="col-sm-9">@Model.EventDate.ToString("yyyy-MM-dd")</dd>
+
+                <dt class="col-sm-3">Time</dt>
+                <dd class="col-sm-9">@Model.EventDate.ToString("HH:mm")</dd>
+
+                <dt class="col-sm-3">Description</dt>
+                <dd class="col-sm-9">@Model.EventDescription</dd>
+
+                <dt class="col-sm-3">Venue</dt>
+                <dd class="col-sm-9">@Model.Venues?.VenueName ?? "Unknown Venue"</dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="EventId" />
+                <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

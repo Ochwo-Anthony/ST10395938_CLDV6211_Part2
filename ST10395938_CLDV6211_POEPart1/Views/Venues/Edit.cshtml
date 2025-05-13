@@ -1,0 +1,52 @@
+﻿@model ST10395938_CLDV6211_POEPart1.Models.Venues
+@{
+    ViewData["Title"] = "Edit Venue";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-warning text-dark">
+            <h4 class="mb-0">Edit Venue</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit" enctype="multipart/form-data">
+                <input type="hidden" asp-for="VenueId" />
+                <div class="mb-3">
+                    <label asp-for="VenueName" class="form-label"></label>
+                    <input asp-for="VenueName" class="form-control" />
+                    <span asp-validation-for="VenueName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="VenueLocation" class="form-label"></label>
+                    <input asp-for="VenueLocation" class="form-control" />
+                    <span asp-validation-for="VenueLocation" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="VenueCapacity" class="form-label"></label>
+                    <input asp-for="VenueCapacity" class="form-control" />
+                    <span asp-validation-for="VenueCapacity" class="text-danger"></span>
+                </div>
+                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                {
+                    <div class="mb-3">
+                        <label>Current Image:</label><br />
+                        <img src="@Model.ImageUrl" class="img-thumbnail" style="max-width: 150px;" />
+                    </div>
+                }
+                <div class="mb-3">
+                    <label asp-for="ImageFile" class="form-label">Upload New Image</label>
+                    <input asp-for="ImageFile" class="form-control" type="file" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <a asp-action="Index" class="btn btn-outline-secondary ms-2">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
